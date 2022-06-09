@@ -16,3 +16,9 @@ print(products)
 
 for p in products:
     print(p[0], '的價格是', p[1])
+
+# csv為電腦常用儲存資料的檔案格式，可用excel開啟，用','分隔可將資料分成excel中的兩格
+with open('products.csv', 'w', encoding='utf-8') as f:
+    f.write('商品,價格\n')
+    for p in products:
+        f.write(p[0] + ',' + p[1] + '\n')
